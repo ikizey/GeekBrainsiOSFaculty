@@ -39,7 +39,6 @@ func removeMulitplesOfThreeFromArray(arr: [Int]) -> [Int] {
 //    return newArr
 }
 print(removeMulitplesOfThreeFromArray(arr: makeArrayof100()))
-assert(removeMulitplesOfThreeFromArray(arr: makeArrayof100()).count == 66)
 
 // 5. * Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 50 элементов.
 
