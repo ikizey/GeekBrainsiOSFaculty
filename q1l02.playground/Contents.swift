@@ -27,16 +27,9 @@ print(makeArrayof100())
 // 4. Удалить из этого массива все четные числа и все числа, которые не делятся на 3.
 func removeMulitplesOfThreeFromArray(arr: [Int]) -> [Int] {
     var newArr = arr
-    newArr.removeAll { $0.isMultiple(of: 3) }
+    newArr.removeAll { !$0.isMultiple(of: 3) }
     newArr.removeAll { $0.isMultiple(of: 2) }
     return newArr
-//    var newArr = [Int]()
-//    for index in 0..<arr.count {
-//        if !isMultipleOfThree(number: arr[index]) {
-//            newArr.append(arr[index])
-//        }
-//    }
-//    return newArr
 }
 print(removeMulitplesOfThreeFromArray(arr: makeArrayof100()))
 
@@ -66,7 +59,7 @@ func add50FibTo(array: [Int]) -> [Int] {
 
 let arr = makeArrayof100()
 let arrAndFib = add50FibTo(array: arr)
-print(arrAndFib.count - arr.count == 50)
+print(arrAndFib)
 
 
 // 6. * Заполнить массив элементов различными простыми числами. Натуральное число, большее единицы, называется простым, если оно делится только на себя и на единицу. Для нахождения всех простых чисел не больше заданного числа n (пусть будет 100), следуя методу Эратосфена, нужно выполнить следующие шаги:
@@ -77,7 +70,7 @@ print(arrAndFib.count - arr.count == 50)
     e. Повторять шаги c и d, пока возможно.
 */
 
-func primes(upTo n: Int = 100) -> [Int] {
+func primes(upTo n: Int) -> [Int] {
     guard n > 2 else { return [0] }
     var result = [Int]()
     var arr = Array(2..<n)
@@ -90,5 +83,5 @@ func primes(upTo n: Int = 100) -> [Int] {
     return result
 }
 
-print(primes())
+print(primes(upTo: 100))
 print(primes(upTo: 5))
