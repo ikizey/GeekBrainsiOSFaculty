@@ -28,6 +28,7 @@ print(makeArrayof100())
 func removeMulitplesOfThreeFromArray(arr: [Int]) -> [Int] {
     var newArr = arr
     newArr.removeAll { $0.isMultiple(of: 3) }
+    newArr.removeAll { $0.isMultiple(of: 2) }
     return newArr
 //    var newArr = [Int]()
 //    for index in 0..<arr.count {
