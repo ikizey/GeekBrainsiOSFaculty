@@ -6,7 +6,7 @@ struct TrunkCar {
     let year: Int
     let volume: Double
     var usedVolume = 0.0
-    var isWindowsOpen: Bool = false {
+    var isWindowsOpen = false {
         didSet {
             guard oldValue != isWindowsOpen else { return }
             let windowsState = isWindowsOpen ? "open" : "close"
