@@ -1,10 +1,10 @@
 import Foundation
 
-public struct SportCar {
+struct SportCar {
     
-    public let model: String
-    public let year: Int
-    public let maxPassengers: Int
+    let model: String
+    let year: Int
+    let maxPassengers: Int
     var color: String {
         didSet {
             print("\(model)'s color is now \(color)")
@@ -30,14 +30,14 @@ public struct SportCar {
         }
     }
     
-    public init(model: String, year: Int, maxPassengers: Int, color: String) {
+    init(model: String, year: Int, maxPassengers: Int, color: String) {
         self.model = model
         self.year = year
         self.maxPassengers = maxPassengers
         self.color = color
     }
     
-    public mutating func takeAction(_ action: Action) {
+    mutating func takeAction(_ action: Action) {
         switch action {
         case .move(let location):
             isEngineStarted = true
@@ -75,7 +75,7 @@ public struct SportCar {
 }
 
 extension SportCar: CustomStringConvertible {
-    public var description: String {
+    var description: String {
         """
 
         ==^==========***============^==
@@ -95,7 +95,7 @@ extension SportCar: CustomStringConvertible {
         """
     }
     
-    public func show() {
+    func show() {
         print(self)
     }
 }

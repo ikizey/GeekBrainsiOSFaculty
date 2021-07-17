@@ -1,6 +1,6 @@
 import Foundation
 
-public enum Action {
+enum Action {
     case move(to: String)
     case openWindows
     case closeWindows

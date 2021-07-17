@@ -1,10 +1,10 @@
 import Foundation
 
-public struct TrunkCar {
+struct TrunkCar {
     
-    public let model: String
-    public let year: Int
-    public let volume: Double
+    let model: String
+    let year: Int
+    let volume: Double
     var usedVolume = 0.0
     var isWindowsOpen: Bool = false {
         didSet {
@@ -21,13 +21,13 @@ public struct TrunkCar {
         }
     }
     
-    public init(model: String, year: Int, volume: Double) {
+    init(model: String, year: Int, volume: Double) {
         self.model = model
         self.year = year
         self.volume = volume
     }
     
-    public mutating func takeAction(_ action: Action) {
+    mutating func takeAction(_ action: Action) {
         switch action {
         case .move(let location):
             isEngineStarted = true
@@ -67,7 +67,7 @@ public struct TrunkCar {
 }
 
 extension TrunkCar: CustomStringConvertible {
-    public var description: String {
+    var description: String {
         """
 
         ==^==========***============^==
@@ -91,7 +91,7 @@ extension TrunkCar: CustomStringConvertible {
         """
     }
     
-    public func show() {
+    func show() {
         print(self)
     }
 }
