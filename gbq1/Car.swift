@@ -4,7 +4,7 @@ class Car: CustomStringConvertible {
     
     let model: String
     let year: Int
-    var isWindowsOpen: Bool = false {
+    var isWindowsOpen = false {
         didSet {
             guard oldValue != isWindowsOpen else { return }
             let windowsState = isWindowsOpen ? "open" : "close"
