@@ -15,7 +15,7 @@ struct SportCar {
             print("\(model) now has \(passengers) passengers of \(maxPassengers) max")
         }
     }
-    var isWindowsOpen: Bool = false {
+    var isWindowsOpen = false {
         didSet {
             guard oldValue != isWindowsOpen else { return }
             let windowsState = isWindowsOpen ? "open" : "close"
