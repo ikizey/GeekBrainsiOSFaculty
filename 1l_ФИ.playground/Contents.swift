@@ -54,7 +54,7 @@ struct RightTriangle {
         }
     }
 }
-//test
+//test triangle
 let EgyptianTriangle = RightTriangle(cathetusA: 3, cathetusB: 4)
 print("Area of EgyptianTriangle: \(EgyptianTriangle.area)")
 print("Hypotenuse of EgyptianTriangle: \(EgyptianTriangle.hypotenuse)")
