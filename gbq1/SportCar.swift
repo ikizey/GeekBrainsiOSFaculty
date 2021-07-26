@@ -41,7 +41,8 @@ class SportCar: Car {
         switch action {
         case .move(let location):
             isEngineStarted = true
-            print("\(model) is moving to \(location)\n...\n...\n\(model) is at \(location) now!")
+            print("\(model) is moving to \(location)\n...\n...\n\(model)" +
+                " is at \(location) now!")
             isEngineStarted = false
         case .openWindows:
             isWindowsOpen = true

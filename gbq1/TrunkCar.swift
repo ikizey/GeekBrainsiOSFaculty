@@ -32,7 +32,8 @@ class TrunkCar: Car {
         switch action {
         case .move(let location):
             isEngineStarted = true
-            print("\(model) is moving to \(location)\n...\n...\n\(model) is at \(location) now!")
+            print("\(model) is moving to \(location)\n...\n...\n\(model)" +
+                    " is at \(location) now!")
             isEngineStarted = false
         case .openWindows:
             isWindowsOpen = true
@@ -48,14 +49,16 @@ class TrunkCar: Car {
                 return
             }
             usedVolume += volume
-            print("Loaded \(volume) of cargo to \(model), \(self.volume - usedVolume) units of volume remaining")
+            print("Loaded \(volume) of cargo to \(model)," +
+                    " \(self.volume - usedVolume) units of volume remaining")
         case .unloadCargo(volume: let volume):
             if usedVolume - abs(volume) < 0 {
                 print("Can't unload cargo!. Not enough cargo in \(model)!")
                 return
             }
             usedVolume -= volume
-            print("Unoaded \(abs(volume)) of cargo from \(model), \(self.volume - usedVolume) units of volume remaining")
+            print("Unoaded \(abs(volume)) of cargo from \(model)," +
+                    " \(self.volume - usedVolume) units of volume remaining")
         default:
             break
         }

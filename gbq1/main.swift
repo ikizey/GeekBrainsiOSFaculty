@@ -2,7 +2,10 @@ import Foundation
 
 
 func lamborghiniStory() {
-    let lamborghini = SportCar(model: "Lamborghini Huracan", year: 2014, maxPassengers: 2, color: "red")
+    let lamborghini = SportCar(model: "Lamborghini Huracan",
+                               year: 2014,
+                               maxPassengers: 2,
+                               color: "red")
     print(lamborghini)
     lamborghini.takeAction(.recolor(color: "yellow"))
     lamborghini.takeAction(.addPassenger)
@@ -16,7 +19,9 @@ func lamborghiniStory() {
 }
 
 func dodgeTruckStory() {
-    let dodgeTruck  = TrunkCar(model: "Dodge Power Wagon", year: 1950, volume: 4_000.0)
+    let dodgeTruck  = TrunkCar(model: "Dodge Power Wagon",
+                               year: 1950,
+                               volume: 4_000.0)
     print(dodgeTruck)
     dodgeTruck.openWindows()
     dodgeTruck.move(to: "farm")
@@ -29,7 +34,10 @@ func dodgeTruckStory() {
 }
 
 func coolCarStory() {
-    let coolCar = SportCar(model: "Swift Car", year: 2016, maxPassengers: 8_000_000_000, color: "orange")
+    let coolCar = SportCar(model: "Swift Car",
+                           year: 2016,
+                           maxPassengers: 8_000_000_000,
+                           color: "orange")
     print(coolCar)
     coolCar.takeAction(.addPassenger)
     coolCar.openWindows()
