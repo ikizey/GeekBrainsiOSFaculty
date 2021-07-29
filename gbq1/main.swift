@@ -6,11 +6,10 @@ func main() {
     print(queue[0]!)
     print(queue[3]!)
     print(queue[-1] ?? "nil", queue[999] ?? "nil")
-    print(queue.pop())
+    print(queue.pop()!)
     queue.push(newElement: "Alice")
     
     print(queue.count)
-    print(queue.first ?? "nil")
     
     let upperQ = queue.map { $0.uppercased() }
     print(upperQ)

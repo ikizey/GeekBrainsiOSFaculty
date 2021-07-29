@@ -18,8 +18,10 @@ struct Queue<T> where T: Comparable {
         elements.append(newElement)
     }
     
-    mutating func pop() -> T {
-        elements.removeFirst()
+    mutating func pop() -> T? {
+        guard !elements.isEmpty else { return nil }
+        
+        return elements.removeFirst()
     }
     
     func filter(_ function: (T) -> Bool) -> Queue<T> {
