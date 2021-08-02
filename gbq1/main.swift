@@ -1,7 +1,7 @@
 func main() {
     
     let eq1 = SquareEquation(a: 0, b: 20, c: 30)
-    let eq2 = SquareEquation(a: 3, b: 7, c: -6)
+    let eq2 = SquareEquation(a: 3.1, b: 7, c: -6)
     let eq3 = SquareEquation(a: 1, b: -1, c: 3)
     let eq4 = SquareEquation(a: 1, b: 12, c: 36)
     let eq5 = SquareEquation(a: 3, b: 0, c: -27)
